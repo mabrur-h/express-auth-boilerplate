@@ -167,7 +167,7 @@ export default class AuthService {
       },
     });
 
-    return true;
+    return { message: 'Password updated successfully' };
   }
 
   // --- Private methods ---

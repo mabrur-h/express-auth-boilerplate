@@ -69,8 +69,8 @@ export default class AuthController extends Api {
   ) => {
     try {
       const { token } = req.params;
-      const { newPassword } = req.body;
-      const data = await this.userService.resetPassword(token, newPassword);
+      const { password } = req.body;
+      const data = await this.userService.resetPassword(token, password);
       this.send(res, data, HttpStatusCode.Accepted, 'resetPassword');
     } catch (e) {
       next(e);

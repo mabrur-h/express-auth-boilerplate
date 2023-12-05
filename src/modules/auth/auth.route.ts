@@ -14,7 +14,7 @@ auth.post(
   RequestValidator.validate(EmailDto),
   controller.requestForgotPassword
 );
-auth.post(
+auth.put(
   '/reset-password/:token',
   RequestValidator.validate(PasswordDto),
   controller.resetPassword
